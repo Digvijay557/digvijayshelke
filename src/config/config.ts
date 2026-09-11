@@ -51,15 +51,8 @@ export const config: Config = {
       },
       {
         rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: '/icons/favicon-32x32.png',
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: '/icons/favicon-16x16.png',
+        type: 'image/svg+xml',
+        href: '/icons/favicon-ds.svg',
       },
       { rel: 'manifest', href: 'site.webmanifest' },
       {
@@ -67,7 +60,11 @@ export const config: Config = {
         href: '/icons/safari-pinned-tab.svg',
         color: '#ffc40d',
       },
-      { rel: 'shortcut icon', href: '/icons/favicon.ico' },
+      {
+        rel: 'shortcut icon',
+        type: 'image/svg+xml',
+        href: '/icons/favicon-ds.svg',
+      },
     ],
   },
   email: 'digvijay55@gmail.com',
