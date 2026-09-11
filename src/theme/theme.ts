@@ -26,8 +26,32 @@ export const theme = extendTheme({
       800: '#A77302',
     },
   },
+  semanticTokens: {
+    colors: {
+      surface: {
+        default: '#FFFFFF',
+        _dark: '#111318',
+      },
+      surfaceElevated: {
+        default: '#F5F7F8',
+        _dark: '#1B1E26',
+      },
+      ink: {
+        default: '#16161D',
+        _dark: '#F5F7F8',
+      },
+      border: {
+        default: '#16161D',
+        _dark: '#F5F7F8',
+      },
+    },
+  },
   styles: {
     global: {
+      body: {
+        bg: 'surface',
+        color: 'ink',
+      },
       html: {
         // scrollBehavior: 'smooth',
       },
@@ -47,6 +71,10 @@ export const theme = extendTheme({
     header: {
       height: '6.5625rem',
     },
+  },
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
   },
   components: {
     Button,

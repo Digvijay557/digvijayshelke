@@ -8,6 +8,8 @@ export const useSetupPostHog = (): void => {
   const oldUrlRef = useRef('')
 
   useEffect(() => {
+    if (!env.NEXT_PUBLIC_POSTHOG_KEY) return
+
     posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
       api_host: '/ingest',
       ui_host: 'https://us.posthog.com',

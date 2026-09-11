@@ -36,8 +36,10 @@ export const Contribution: React.FC<ContributionProps> = ({
   return (
     <LinkBox
       p='4'
-      borderColor='black'
+      borderColor='border'
       border='1px solid'
+      bg='rgba(255, 255, 255, 0.06)'
+      backdropFilter='blur(14px)'
       shadow={`8px 8px 0px 0px ${language.color}`}
       transition='all 0.1s ease-in-out'
       _hover={{ shadow: 'none', transform: 'translate(8px, 8px)' }}

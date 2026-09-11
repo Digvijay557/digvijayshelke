@@ -13,27 +13,27 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "ignoreDeprecations": "5.0",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "baseUrl": "src",
     "paths": {
       "@components/*": [
-        "components/*"
+        "./src/components/*"
       ],
       "@config/*": [
-        "config/*"
+        "./src/config/*"
       ],
       "@data/*": [
-        "data/*"
+        "./src/data/*"
       ],
       "@public/*": [
-        "../public/*"
+        "./public/*"
       ],
       "@utils/*": [
-        "utils/*"
+        "./src/utils/*"
       ]
     },
     "plugins": [

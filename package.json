@@ -2,7 +2,7 @@
   "name": "chr-ge.com",
   "version": "0.1.2",
   "private": true,
-  "author": "George Christeas <george@chr-ge.com> (https://chr-ge.com/)",
+  "author": "Digvijay Shelke <digvijay55@gmail.com> (https://digvijayshelke.com/)",
   "license": "GPL-2.0-or-later",
   "scripts": {
     "type-check": "tsc --pretty --noEmit",
@@ -15,10 +15,10 @@
     "analyze": "ANALYZE=true yarn build",
     "postinstall": "husky install"
   },
-  "homepage": "https://chr-ge.com",
+  "homepage": "https://digvijayshelke.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chr-ge/chr-ge.com.git"
+    "url": "git+https://github.com/Digvijay557/portfolio.git"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.4.2",

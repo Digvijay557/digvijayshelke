@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
       pt='12'
       pb='24'
       px={{ base: '4', md: '8' }}
-      borderColor='black'
+      borderColor='border'
       borderTop='1px solid'
     >
       <Stack

@@ -3,16 +3,16 @@ import type { ContributionProps } from '@components/structure/OpenSource/Contrib
 
 export const contributions: ContributionProps[] = [
   {
-    user: 'chr-ge',
-    repository: 'react-column-select',
+    user: 'Digvijay557',
+    repository: 'portfolio',
     role: {
       label: 'creator',
       color: 'green',
     },
-    githubUrl: 'https://github.com/chr-ge/react-column-select',
+    githubUrl: 'https://github.com/Digvijay557',
     description: {
-      en: 'React component to select options by transferring them from one column to another.',
-      fr: "React component pour sélectionner des options en les transférant d'une colonne à une autre.",
+      en: 'Personal portfolio and experiments focused on product design, frontend craft, and modern web experiences.',
+      fr: "Portfolio personnel et expérimentations axés sur la conception de produits, le design frontend et les expériences web modernes.",
     },
     topics: ['react', 'select', 'form'],
     language: {

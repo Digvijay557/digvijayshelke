@@ -1,7 +1,7 @@
 import type { DefaultSeoProps } from 'next-seo'
 import { i18n } from '../../next-i18next.config'
 
-export const NAME = 'George Christeas'
+export const NAME = 'DIGVIJAY SHELKE'
 
 export const config: Config = {
   isDev: process.env.NODE_ENV === 'development',
@@ -11,22 +11,22 @@ export const config: Config = {
   seo: {
     title: `${NAME} // Full-Stack Software Developer`,
     description:
-      'I build things with my mouse and keyboard. Welcome to my software developer portfolio.',
-    canonical: 'https://chr-ge.com',
+      'I design and build high-impact digital experiences for brands, businesses, and founders.',
+    canonical: 'https://digvijayshelke.com',
     openGraph: {
       type: 'website',
       locale: 'en_US',
-      url: 'https://chr-ge.com',
+      url: 'https://digvijayshelke.com',
       title: `${NAME} // Full-Stack Software Developer`,
       description:
-        'I build things with my mouse and keyboard. Welcome to my software developer portfolio.',
+        'I design and build high-impact digital experiences for brands, businesses, and founders.',
       site_name: `${NAME} // Full-Stack Software Developer`,
       images: [
         {
-          url: 'https://chr-ge.com/img/banner.png',
+          url: 'https://digvijayshelke.com/img/banner.png',
           width: 1200,
           height: 630,
-          alt: 'chr-ge banner',
+          alt: 'Digvijay Shelke banner',
         },
       ],
     },
@@ -34,8 +34,8 @@ export const config: Config = {
       cardType: 'summary',
     },
     languageAlternates: [
-      { hrefLang: 'en', href: 'https://chr-ge.com' },
-      { hrefLang: 'fr', href: 'https://chr-ge.com/fr' },
+      { hrefLang: 'en', href: 'https://digvijayshelke.com' },
+      { hrefLang: 'fr', href: 'https://digvijayshelke.com/fr' },
     ],
     additionalMetaTags: [
       { httpEquiv: 'x-ua-compatible', content: 'IE=edge; chrome=1' },
@@ -70,10 +70,10 @@ export const config: Config = {
       { rel: 'shortcut icon', href: '/icons/favicon.ico' },
     ],
   },
-  email: 'george@chr-ge.com',
-  email_link: 'mailto:george@chr-ge.com',
-  github: 'https://github.com/chr-ge',
-  linkedin: 'https://www.linkedin.com/in/chr-ge/',
+  email: 'digvijay55@gmail.com',
+  email_link: 'mailto:digvijay55@gmail.com',
+  github: 'https://github.com/Digvijay557/',
+  linkedin: 'https://www.linkedin.com/in/digvijay-shelke-020a94201/',
 }
 
 interface Config {

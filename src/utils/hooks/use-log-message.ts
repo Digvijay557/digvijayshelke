@@ -15,7 +15,7 @@ export const useLogMessage = (): void => {
         \\_____|_|  |_|_|  \\_\\      \\_____|______|
     
         Check out my portfolio's code on Github:
-        https://github.com/chr-ge/chr-ge.com
+        https://github.com/Digvijay557
         `,
       'color:yellow;font-weight:bold'
     )

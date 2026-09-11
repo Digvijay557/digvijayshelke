@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Button, HStack, useDimensions } from '@chakra-ui/react'
+import { Box, Button, HStack, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 const MotionBox = motion.create(Box)
@@ -19,22 +19,44 @@ export const TagsBar: React.FC<TagsBarProps> = ({
 }) => {
   const [isSticky, setIsSticky] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-  const dimensions = useDimensions(ref as React.RefObject<HTMLElement>, true)
+  const stickyGradient = useColorModeValue(
+    [
+      'linear-gradient(90deg, #fad0c4 0%, #ffd1ff 100%)',
+      'linear-gradient(90deg, #fdcbf1 0%, #e6dee9 100%)',
+    ],
+    [
+      'linear-gradient(90deg, #3B1F2B 0%, #143D4A 100%)',
+      'linear-gradient(90deg, #2A1B4B 0%, #1A4A4A 100%)',
+    ]
+  )
 
   useEffect(() => {
-    if (!dimensions) return
-    setIsSticky(dimensions.borderBox.top <= HEADER_HEIGHT)
-  }, [dimensions])
+    const updateStickyState = () => {
+      if (ref.current) {
+        setIsSticky(ref.current.getBoundingClientRect().top <= HEADER_HEIGHT)
+      }
+    }
+
+    updateStickyState()
+    window.addEventListener('scroll', updateStickyState)
+    window.addEventListener('resize', updateStickyState)
+
+    return () => {
+      window.removeEventListener('scroll', updateStickyState)
+      window.removeEventListener('resize', updateStickyState)
+    }
+  }, [])
 
   return (
     <MotionBox
       ref={ref}
       pos='sticky'
       top='var(--chakra-sizes-header-height)'
-      bg='white'
+      bg='rgba(17, 19, 24, 0.72)'
+      backdropFilter='blur(18px)'
       px={{ base: '4', md: '8' }}
       zIndex='dropdown'
-      borderColor='black'
+      borderColor='border'
       borderBottom='1px solid'
       overflowX='auto'
       initial={{ paddingTop: '4rem', paddingBottom: '1.5rem' }}
@@ -43,15 +65,12 @@ export const TagsBar: React.FC<TagsBarProps> = ({
           ? {
               paddingTop: '1rem',
               paddingBottom: '1rem',
-              background: [
-                'linear-gradient(90deg, #fad0c4 0%, #ffd1ff 100%)',
-                'linear-gradient(90deg, #fdcbf1 0%, #e6dee9 100%)',
-              ],
+              background: stickyGradient,
             }
           : {
               paddingTop: '4rem',
               paddingBottom: '1.5rem',
-              background: 'white',
+              background: 'var(--chakra-colors-surface)',
             }
       }
       transition={{

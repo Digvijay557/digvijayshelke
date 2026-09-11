@@ -2,12 +2,13 @@ import type { GetStaticProps, NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { MainLayout } from '@components/layouts/MainLayout'
 import {
+  ClientWork,
   ContactMe,
   Hero,
-  OpenSource,
   SelectedProjects,
   SkillSet,
   SlashDivider,
+  WhyWorkWithMe,
 } from '@components/structure'
 import { useLogMessage } from '@utils/hooks/use-log-message'
 import { config } from '@config/config'
@@ -18,9 +19,10 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       <Hero />
+      <ClientWork />
       <SlashDivider />
       <SelectedProjects />
-      <OpenSource />
+      <WhyWorkWithMe />
       <SkillSet />
       <ContactMe />
     </MainLayout>

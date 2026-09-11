@@ -30,9 +30,10 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => (
         px={{ base: '4', md: '8' }}
         direction={{ base: 'column', md: 'row' }}
         spacing='4'
-        borderColor='black'
+        borderColor='border'
         borderBottom='1px solid'
-        bgGradient='linear(to-r, #DFE9F3, white)'
+        bg='rgba(17, 19, 24, 0.82)'
+        backdropFilter='blur(18px)'
         initial={{ opacity: 0, top: '0rem' }}
         animate={{ opacity: 1, top: 'var(--chakra-sizes-header-height)' }}
         exit={{ opacity: 0, top: '0rem' }}

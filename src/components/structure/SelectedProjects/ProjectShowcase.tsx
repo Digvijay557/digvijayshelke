@@ -26,19 +26,42 @@ export const ProjectShowcase: React.FC<Project> = ({
 }) => {
   const { t, i18n } = useTranslation('common')
   const posthog = usePostHog()
+  const isHighlighted = title.toLowerCase().includes('swag')
 
   return (
     <Stack
       direction={{ base: 'column', md: 'row' }}
       h='96'
       px='6'
-      borderColor='black'
+      borderColor={isHighlighted ? 'yellow.400' : 'border'}
       border='1px solid'
+      bg={isHighlighted ? 'rgba(250, 204, 21, 0.08)' : 'rgba(255, 255, 255, 0.06)'}
+      backdropFilter='blur(14px)'
+      boxShadow={
+        isHighlighted
+          ? '0 0 0 1px rgba(250, 204, 21, 0.8), 0 20px 60px rgba(250, 204, 21, 0.2)'
+          : '0 20px 60px rgba(0, 0, 0, 0.16)'
+      }
       spacing={{ base: '0', md: '24' }}
       role='group'
       overflow='hidden'
     >
       <VStack flex='2' py='4' align='flex-start' justify='center' spacing='4'>
+        {isHighlighted && (
+          <Box
+            px='2'
+            py='1'
+            borderRadius='full'
+            bg='yellow.400'
+            color='black'
+            fontSize='xs'
+            fontWeight='bold'
+            letterSpacing='widest'
+            textTransform='uppercase'
+          >
+            Currently Working
+          </Box>
+        )}
         <Heading as='h3'>{title}</Heading>
         <Divider opacity='1' />
         <Text>{description[i18n.language as keyof typeof description]}</Text>
@@ -81,7 +104,7 @@ export const ProjectShowcase: React.FC<Project> = ({
           mt='4'
           pt='1.5'
           px='1.5'
-          border='1px solid black'
+          border='1px solid rgba(255, 255, 255, 0.18)'
           borderBottom='none'
           borderTopRadius='1.375rem'
         >
@@ -92,12 +115,13 @@ export const ProjectShowcase: React.FC<Project> = ({
           pos='absolute'
           pt='3.5'
           px='3.5'
-          bg='#F9FBFD'
+          bg='rgba(255, 255, 255, 0.08)'
+          backdropFilter='blur(12px)'
           w='full'
           top='0'
           left='0'
           right='0'
-          border='1px solid black'
+          border='1px solid rgba(255, 255, 255, 0.18)'
           borderBottom='0'
           borderTopRadius='1.875rem'
           initial={{ y: '4rem' }}
@@ -119,7 +143,7 @@ const ImageWithBorder: React.FC<Pick<Project, 'title' | 'image'>> = ({
     w='full'
     borderTopRadius='2xl'
     overflow='hidden'
-    borderColor='black'
+    borderColor='border'
     borderTop='1px solid'
     borderLeft='1px solid'
     borderRight='1px solid'

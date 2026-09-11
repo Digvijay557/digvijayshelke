@@ -21,13 +21,15 @@ export const Bookmark: React.FC<Raindrop> = ({ title, link, cover, tags }) => {
   return (
     <LinkBox
       as='article'
-      bgColor='gray.50'
-      borderColor='black'
+      bg='rgba(255, 255, 255, 0.06)'
+      backdropFilter='blur(14px)'
+      borderColor='border'
       border='1px solid'
+      boxShadow='0 16px 45px rgba(0, 0, 0, 0.14)'
       role='group'
     >
       <Flex h='full' flexDir='column' align='stretch'>
-        <Box position='relative' borderColor='black' borderBottom='1px solid'>
+        <Box position='relative' borderColor='border' borderBottom='1px solid'>
           <AspectRatio w='full' ratio={16 / 9}>
             <Image
               src={cover}

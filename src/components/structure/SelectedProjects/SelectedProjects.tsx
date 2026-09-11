@@ -22,6 +22,7 @@ const item: Variants = {
 }
 
 const MotionVStack = motion.create(VStack)
+const MotionHeading = motion.create(Heading)
 
 export const SelectedProjects: React.FC = () => {
   const { t } = useTranslation('common')
@@ -37,9 +38,17 @@ export const SelectedProjects: React.FC = () => {
         spacing='16'
         scrollMarginTop='var(--chakra-sizes-header-height)'
       >
-        <Heading as='h2' variant='section' size='2xl'>
+        <MotionHeading
+          as='h2'
+          variant='section'
+          size='2xl'
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           {t('selected-projects')}
-        </Heading>
+        </MotionHeading>
         <MotionVStack
           align='stretch'
           spacing='12'

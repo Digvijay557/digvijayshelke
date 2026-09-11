@@ -13,6 +13,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
  **/
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
+  devIndicators: false,
   headers: async () => [
     {
       source: '/:path*',
@@ -36,7 +37,7 @@ module.exports = withBundleAnalyzer({
   redirects: async () => [
     {
       source: '/github',
-      destination: 'https://github.com/chr-ge',
+      destination: 'https://github.com/Digvijay557',
       permanent: true,
     },
   ],

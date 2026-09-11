@@ -11,7 +11,7 @@ export default function Document() {
         <ColorModeScript />
         <Main />
         <NextScript />
-        {config.isDev && (
+        {config.isDev && env.NEXT_PUBLIC_CLOUDFLARE_TOKEN && (
           <script
             defer
             src='https://static.cloudflareinsights.com/beacon.min.js'

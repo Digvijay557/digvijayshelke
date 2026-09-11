@@ -3,13 +3,20 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useMemo } from 'react'
 import { NextSeo } from 'next-seo'
 import { useTranslation } from 'next-i18next'
-import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { parseAsString, useQueryState } from 'nuqs'
 import { motion } from 'framer-motion'
 import { type Raindrop, fetchBookmarks } from '@data/bookmarks'
 import { MainLayout } from '@components/layouts/MainLayout'
 import { Bookmark, SlashDivider, TagsBar } from '@components/structure'
-import { config } from 'config/config'
+import { config } from '@config/config'
 
 const MotionFlex = motion.create(Flex)
 
@@ -26,6 +33,16 @@ const Bookmarks: NextPage<BookmarksProps> = ({
   const [activeTag, setActiveTag] = useQueryState(
     'tag',
     parseAsString.withDefault('all')
+  )
+  const bookmarksGradient = useColorModeValue(
+    [
+      'linear-gradient(90deg, #fad0c4 0%, #ffd1ff 100%)',
+      'linear-gradient(90deg, #fdcbf1 0%, #e6dee9 100%)',
+    ],
+    [
+      'linear-gradient(90deg, #3B1F2B 0%, #143D4A 100%)',
+      'linear-gradient(90deg, #2A1B4B 0%, #1A4A4A 100%)',
+    ]
   )
 
   const bookmarks = useMemo(
@@ -47,10 +64,7 @@ const Bookmarks: NextPage<BookmarksProps> = ({
         px={{ base: '4', md: '8' }}
         rowGap='6'
         animate={{
-          background: [
-            'linear-gradient(90deg, #fad0c4 0%, #ffd1ff 100%)',
-            'linear-gradient(90deg, #fdcbf1 0%, #e6dee9 100%)',
-          ],
+          background: bookmarksGradient,
         }}
         transition={{ repeat: Infinity, repeatType: 'reverse', duration: 2 }}
       >

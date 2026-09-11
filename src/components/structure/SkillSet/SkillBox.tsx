@@ -25,13 +25,17 @@ export const SkillBox: React.FC<SkillProps> = ({
       <Center
         p='1'
         boxSize='16'
-        bg='gray.100'
+          bg='rgba(255, 255, 255, 0.08)'
+          backdropFilter='blur(12px)'
+          border='1px solid'
+          borderColor='rgba(255, 255, 255, 0.16)'
+          borderRadius='xl'
         onMouseEnter={() => {
           setBorderColor(color)
           onOpen()
         }}
         onMouseLeave={() => {
-          setBorderColor('black')
+          setBorderColor('border')
           onClose()
         }}
         onClick={onToggle}

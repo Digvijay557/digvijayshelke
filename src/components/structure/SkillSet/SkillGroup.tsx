@@ -16,23 +16,27 @@ export interface SkillGroupProps extends ISkillGroup {}
 
 export const SkillGroup: React.FC<SkillGroupProps> = ({ category, skills }) => {
   const { t } = useTranslation('common')
-  const [borderColor, setBorderColor] = useState('black')
+  const [borderColor, setBorderColor] = useState('border')
 
   return (
     <motion.div variants={group}>
       <VStack
         align='flex-start'
         p='6'
-        borderColor={borderColor}
+        borderColor={borderColor === 'border' ? 'rgba(255, 255, 255, 0.22)' : borderColor}
         borderWidth='1px'
         borderStyle='solid'
+        borderRadius='2xl'
+        bg='rgba(255, 255, 255, 0.07)'
+        backdropFilter='blur(18px)'
+        boxShadow='0 18px 55px rgba(0, 0, 0, 0.16)'
         spacing='6'
         transition='border-color 0.1s ease-in-out'
       >
         <Heading as='h3' variant='skillCategory'>
           {t(category as keyof typeof common)}
         </Heading>
-        <SimpleGrid columns={3} spacing='5'>
+        <SimpleGrid columns={3} spacing='5' w='full'>
           {skills.map((skill) => (
             <SkillBox
               key={skill.name}

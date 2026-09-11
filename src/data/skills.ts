@@ -1,14 +1,12 @@
 import { IoLogoPwa } from 'react-icons/io5'
+import { FaDatabase } from 'react-icons/fa6'
 import {
-  SiAmazonwebservices,
-  SiAmazondynamodb,
   SiExpress,
   SiGooglecloud,
   SiGraphql,
   SiLaravel,
   SiMongodb,
   SiMysql,
-  SiNextdotjs,
   SiNodedotjs,
   SiPhp,
   SiPostgresql,
@@ -54,7 +52,6 @@ export const skills: SkillGroup[] = [
     id: '3',
     category: 'back-end',
     skills: [
-      { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
       { name: 'GraphQL', icon: SiGraphql, color: '#E10098' },
       { name: 'Express', icon: SiExpress, color: '#000000' },
@@ -66,12 +63,9 @@ export const skills: SkillGroup[] = [
     id: '4',
     category: 'cloud',
     skills: [
-      {
-        name: 'Amazon Web Services',
-        icon: SiAmazonwebservices,
-        color: '#232F3E',
-      },
       { name: 'Google Cloud Platform', icon: SiGooglecloud, color: '#4285F4' },
+
+
       { name: 'Vercel', icon: SiVercel, color: '#000000' },
       { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
       { name: 'Terraform', icon: SiTerraform, color: '#844FBA' },
@@ -83,7 +77,7 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
-      { name: 'Amazon DynamoDB', icon: SiAmazondynamodb, color: '#4053D6' },
+      { name: 'Amazon DynamoDB', icon: FaDatabase, color: '#4053D6' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'Redis', icon: SiRedis, color: '#DC382D' },
     ],
