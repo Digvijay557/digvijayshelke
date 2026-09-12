@@ -32,14 +32,17 @@ export const ClientWork: React.FC = () => {
       color='white'
       px={{ base: '6', md: '12' }}
       py={{ base: '20', md: '32' }}
+      overflow='hidden'
     >
       <MotionText
         maxW='7xl'
-        fontSize={{ base: '4rem', sm: '5rem', md: '8rem' }}
+        w='full'
+        fontSize={{ base: '3rem', sm: '4.5rem', md: '8rem' }}
         fontWeight='bold'
         lineHeight={{ base: '1.05', sm: '1', md: '0.95' }}
         letterSpacing='-0.03em'
         textTransform='uppercase'
+        overflowWrap='break-word'
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
