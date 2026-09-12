@@ -49,14 +49,22 @@ export const ClientWork: React.FC = () => {
         <Text
           as='span'
           display='inline-block'
-          minW={{ base: '7ch', md: '9ch' }}
+          pos='relative'
+          w={{ base: '10ch', md: '11ch' }}
+          h='1.1em'
           lineHeight='1.1'
           verticalAlign='baseline'
         >
           <AnimatePresence mode='wait' initial={false}>
             <motion.span
               key={wordIndex}
-              style={{ display: 'inline-block', whiteSpace: 'nowrap' }}
+              style={{
+                display: 'inline-block',
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                whiteSpace: 'nowrap',
+              }}
               initial={{ opacity: 0, y: '0.35em' }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: '-0.35em' }}
