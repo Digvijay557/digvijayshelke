@@ -31,7 +31,7 @@ export const ProjectShowcase: React.FC<Project> = ({
   return (
     <Stack
       direction={{ base: 'column', md: 'row' }}
-      h='96'
+      h={{ base: 'auto', md: '96' }}
       px='6'
       borderColor={isHighlighted ? 'yellow.400' : 'border'}
       border='1px solid'
