@@ -154,7 +154,7 @@ export const ContactMe: React.FC = () => {
         </Button>
         <Button
           as='a'
-          href='https://wa.me/919960250439'
+          href='https://wa.me/919960150439'
           target='_blank'
           rel='noopener noreferrer'
           alignSelf='flex-start'
