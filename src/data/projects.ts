@@ -43,7 +43,7 @@ export const projects: Project[] = [
       fr: 'Une boutique de vêtements moderne présentant des collections de saris intemporels et une mode élégante.',
     },
     image: { src: YuvradniImage },
-    homepage: 'https://kalabam.com/?ref=chr-ge.com',
+    homepage: 'https://yuvradni.vercel.app/',
     technologies: [
       { name: 'React', icon: SiReact, color: '#61DAFB' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
@@ -64,7 +64,7 @@ export const projects: Project[] = [
       fr: 'Nous connectons des influenceurs et des marques pour collaborer sur des publicités de produits et plus encore.',
     },
     image: { src: AkarInteriorsImage },
-    homepage: 'https://hypzz.chr-ge.com/?ref=chr-ge.com',
+    homepage: 'https://akarinteriorss.vercel.app/',
     technologies: [
       { name: 'React', icon: SiReact, color: '#61DAFB' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
